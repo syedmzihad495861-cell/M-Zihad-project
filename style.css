@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+
+    /* Columns */
+    grid-template-columns: 150px repeat(4, 1fr);
+
+    /* Rows */
+    grid-template-rows: 100px 150px 150px 150px 80px;
+
+    /* Grid Areas */
+    grid-template-areas:
+    "navbar header header header header"
+    "navbar side-content side-content services services"
+    "navbar future-image future-image future-content future-content"
+    "navbar home home home home"
+    "footer footer footer footer footer";
+
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Common Style */
+.container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Individual Boxes */
+
+.navbar{
+     grid-area:navbar;
+     background-color: rgb(253, 2, 2);
+}
+.header{
+     grid-area:header;
+     background-color: darkgrey;
+}
+.services{
+     grid-area:services;
+     background-color: rgb(255, 217, 0);
+}
+.side-content{
+     grid-area:side-content;
+     background-color: rgb(51, 255, 0);
+}
+.future-image{
+     grid-area:future-image;
+     background-color: rgb(255, 0, 191);
+}
+.future-content{
+     grid-area:future-content;
+     background-color: rgb(212, 0, 255);
+}
+.home{
+     grid-area:home;
+     background-color: rgb(0, 238, 255);
+}
+.footer{
+     grid-area:footer;
+     background-color: rgb(25, 0, 255);
+}
